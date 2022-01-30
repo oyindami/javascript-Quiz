@@ -56,13 +56,13 @@ var initialINPEL = document.getElementById("initialID");
 var submitIntBtnEL = document.getElementById("sumbitInt");
 
 var questionNum = 0; //putting the questions in globals
-var totalTime = 75; //setting the total amount of time allowed
+var totalTime = 45; //setting the total amount of time allowed
 var timeRemaining = 0; // score catcher
 
 //create a time function to count the time up to 75 seconds
 function timeCounter() {
   var timer = setInterval(function () {
-    if (totalTime >= 5) {
+    if (totalTime >= 10) {
       timerRead.textContent = "Time: " + totalTime;
       totalTime--;
       timeRemaining = totalTime;
@@ -112,7 +112,7 @@ function final() {
         score: timeRemaining,
       };
       console.log(finalScore);
-      
+
       var allScores = localStorage.getItem("allScores");
       if (allScores === null) {
         allScores = [];
@@ -131,13 +131,14 @@ function final() {
 //looping through the answers to check for right anser
 function answerChecker(x) {
   if (
-    QuizQuestions[questionNum].answers[x] === QuizQuestions[questionNum].correct
+    QuizQuestions[questionNum].answers[x] ===
+    QuizQuestions[questionNum].correctAnswer
   ) {
     ansValP1EL.innerText = "Correct!";
   } //if statement close
   else {
     ansValP1EL.innerText = "Wrong!";
-    totalTime = totalTime - 10;
+    totalTime = totalTime - 5;
   } //else statement close
 }
 //PROCESSES QUESTION AND ANSWER FIELDS

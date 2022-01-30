@@ -86,7 +86,7 @@ function final() {
 
   finalBL.appendChild(createLabel);
 
-  // input
+  // input for the initiials
   var createInput = document.createElement("input");
   createInput.setAttribute("type", "text");
   createInput.setAttribute("id", "initials");

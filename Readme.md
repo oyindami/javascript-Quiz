@@ -26,7 +26,7 @@ THEN I can save my initials and my score
 https://watch.screencastify.com/v/Df4sFLS8XBb2P4p38fUC
 
 ## Links
-
+```
 [githublink](https://github.com/oyindami/javascript-Quiz)
 [deployed-site](https://oyindami.github.io/javascript-Quiz/)
 

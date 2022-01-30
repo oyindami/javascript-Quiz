@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Linking the main style page -->
+    <title>Code Quiz</title>
+  </head>
+  <body>
+    <!-- MAIN HEADER (Includes time and score link) -->
+    <header class="headerC">
+      <h1 id="viewScore"><a href="scores.html">View Score</a></h1>
+      <h1 id="time">Timer:</h1>
+    </header>
+    <!-- CONTAINER -->
+    <div class="container" id="containerID">
+      <!--START-->
+      <div class="start" id="startID">
+        <h1 id="startTitle">Code Quiz</h1>
+        <p1 id="startText"
+          >Please answer all questions, failed answers will reduce score by 5
+          seconds!</p1
+        ><br />
+        <button id="startBtn">Start Quiz</button>
+      </div>
+      <!--QUIZ- QUESTION AND ANSWER SET UP -->
+      <div class="qandaDIS" id="qandaDISID">
+        <p1 id="questionID"></p1>
+        <ul id="answersID">
+          <li><button id="a1Btn" class="optionBtns"></button></li>
+          <li><button id="a2Btn" class="optionBtns"></button></li>
+          <li><button id="a3Btn" class="optionBtns"></button></li>
+          <li><button id="a4Btn" class="optionBtns"></button></li>
+        </ul>
+        <p1 id="answerVID"></p1>
+      </div>
+      <!--FINAL RESPONSES-->
+      <div id="finalID">
+        <h1>All done!</h1>
+        <br />
+        <p id="finalScore"></p>
+      </div>
+    </div>
+    <script src="Quiz-script.js"></script>
+    <!-- Linking the script to the main.js file -->
+  </body>
+</html>

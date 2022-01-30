@@ -1,0 +1,38 @@
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 25px;
+}
+header{
+    font-size: 10px;
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+}
+.container{
+    padding: 100px;
+    border: 2px solid grey;
+    background-color: white;
+    margin: 100px;
+}
+.start {
+    text-align: center;
+}
+body button{
+    margin-top: 50px;
+    padding: 15px;
+    background-color: #930167; 
+    border-radius: 12px; 
+    cursor: pointer;
+    color:grey;
+    font-size: 20px;
+}
+body ul li{
+    list-style-type: none;
+}
+.content{
+    text-align: center;
+}
+#scoreList{
+    list-style: none;
+    text-align: left;
+}

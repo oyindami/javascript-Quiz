@@ -112,6 +112,7 @@ function final() {
         score: timeRemaining,
       };
       console.log(finalScore);
+      
       var allScores = localStorage.getItem("allScores");
       if (allScores === null) {
         allScores = [];
@@ -121,8 +122,9 @@ function final() {
       allScores.push(finalScore);
       var newScore = JSON.stringify(allScores);
       localStorage.setItem("allScores", newScore); //setting items for local storage
+      // console.log(allScores);
       // Travels to final page
-      window.location.replace("scores.html"); //calling on seperate location to call highscore
+      window.location.replace("scores.html"); //calling on seperate location to call score
     }
   });
 }

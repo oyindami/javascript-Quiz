@@ -24,7 +24,7 @@ goBackBtnEL.addEventListener("click", function () {
   location.href = "index.html";
 });
 
-// clearHBtnEL.addEventListener("click", function(){
-//     localStorage.clear();
-//     location.reload();
-// })
+clearHBtnEL.addEventListener("click", function(){
+    localStorage.clear();
+    location.reload();
+}) //to clear the history 

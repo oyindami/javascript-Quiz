@@ -1,24 +1,3 @@
-//set containers for the values of quiz, results and the submit//
-//function for the quiz questions//
-//functionn for the results//
-
-// var quizcontainer = document.getElementById ('quiz');
-// var answercontainer = document.getElementById ('answer');
-// var submitcontainer = document.getElementById ('submit');
-
-// //timer
-// let timeleft = 75;
-// const downloadTimer = setInterval(function () {
-//   if (timeleft <= 0) {
-//     clearInterval(downloadTimer);
-//   }
-//   document.getElementById("time").innerHTML = `Time left : ${timeleft}`;
-//   //reduce 1 from the timer every one second
-//   timeleft -= 1;
-// }, 1000);
-
-// all the questions
-
 var QuizQuestions = [
   {
     question: "Which of these is not a code language?",
@@ -55,14 +34,6 @@ var QuizQuestions = [
   },
 ];
 
-// function displayQuiz()
-// function displayResult()
-//to display the result//
-
-// submitButton.addEventListener('click', displayResult)
-
-//DEFINING THE questions
-
 //CREATING VARIABLES
 var timerRead = document.getElementById("time"); //variable for reading the time
 
@@ -71,7 +42,7 @@ var containerDIVEL = document.getElementById("containerID"); //main body div
 var startBL = document.getElementById("startID"); //start div block
 var startBTNEL = document.getElementById("startBtn"); //start button
 var quizBL = document.getElementById("qandaDISID"); //quiz div
-var questionP1EL = document.getElementById("questionID");
+var questionEL = document.getElementById("questionID");
 var answerULEL = document.getElementById("answersID");
 var a1BtnEL = document.getElementById("a1Btn");
 var a2BtnEL = document.getElementById("a2Btn");
@@ -103,7 +74,8 @@ function timeCounter() {
   }, 1000);
   console.log(timer);
 }
-//FINAL MESSAGE
+/// coulkd not get the timer to take out 5 seconds :(
+
 function final() {
   containerDIVEL.removeChild(quizBL); //removing quiz
   containerDIVEL.appendChild(finalBL); //adding final message
@@ -154,7 +126,7 @@ function final() {
     }
   });
 }
-//PROCESSES CORRECT ANSWER VALIDATION
+//looping through the answers to check for right anser
 function answerChecker(x) {
   if (
     QuizQuestions[questionNum].answers[x] === QuizQuestions[questionNum].correct
@@ -171,7 +143,7 @@ function quiz() {
   //changing the questions and answers
   if (questionNum <= 4) {
     console.log(questionNum);
-    questionP1EL.innerHTML = QuizQuestions[questionNum].question;
+    questionEL.innerHTML = QuizQuestions[questionNum].question;
     console.log(QuizQuestions[questionNum].question);
 
     a1BtnEL.innerText = QuizQuestions[questionNum].answers[0];
@@ -213,7 +185,7 @@ function quiz() {
 function start() {
   containerDIVEL.removeChild(quizBL); //removing the quiz
   containerDIVEL.removeChild(finalBL); //removing the final message
-  //awaiting for button click to start both timer and the quiz
+  //add even listener to the buttons
   startBTNEL.addEventListener("click", function () {
     containerDIVEL.removeChild(startBL);
     containerDIVEL.appendChild(quizBL);
@@ -221,4 +193,4 @@ function start() {
     quiz();
   });
 }
-start(); //already calling on this from behind
+start();

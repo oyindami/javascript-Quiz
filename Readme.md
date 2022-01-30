@@ -23,15 +23,14 @@ WHEN the game is over
 THEN I can save my initials and my score
 
 ## Description
-
-https://watch.screencastify.com/v/ewljp2BwDmV9prnDrPC2
+https://watch.screencastify.com/v/Df4sFLS8XBb2P4p38fUC
 
 ## Links
 
 [githublink](https://github.com/oyindami/javascript-Quiz)
 [deployed-site]()
 
-https://watch.screencastify.com/v/ewljp2BwDmV9prnDrPC2
+
 
 ## Contact me
 
